@@ -13,8 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "muren.ai - Coming Soon",
-  description: "muren.ai coming soon.",
+  title: "muren.ai",
+  description: "Bridging the gap between physical reality and virtual utility. Home of Escribo and CareerKonnect.",
+  keywords: ["muren", "escribo", "careerkonnect", "ai", "startups", "technology"],
+  authors: [{ name: "Muren AI" }],
+  icons: {
+    icon: "/icon.svg",
+  },
+};
+
+export const viewport = {
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -25,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
       >
         {children}
       </body>
