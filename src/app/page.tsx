@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { Section } from '@/components/Section';
 import { ProductCard } from '@/components/ProductCard';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -85,10 +87,26 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="group">
+                <div className="relative w-48 aspect-[3/4] mb-6 overflow-hidden bg-neutral-800 grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <Image
+                    src="/huzaifa.jpeg"
+                    alt="Huzaifa Sarfaraz"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <span className="block text-xs font-mono uppercase tracking-widest text-neutral-500 mb-2">CEO</span>
                 <h3 className="text-3xl sm:text-4xl font-light">Huzaifa Sarfaraz</h3>
               </div>
               <div className="group">
+                <div className="relative w-48 aspect-[3/4] mb-6 overflow-hidden bg-neutral-800 grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <Image
+                    src="/zayyan.jpeg"
+                    alt="Zayyan Ahmed"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <span className="block text-xs font-mono uppercase tracking-widest text-neutral-500 mb-2">CTO</span>
                 <h3 className="text-3xl sm:text-4xl font-light">Zayyan Ahmed</h3>
               </div>
