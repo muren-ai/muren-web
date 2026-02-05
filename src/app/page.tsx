@@ -185,6 +185,9 @@ export default function Home() {
             <p className="text-neutral-500 max-w-sm">
               Designing the interface for the next generation of human-computer interaction.
             </p>
+            <p className="text-neutral-600 text-xs w-full max-w-xs">
+              National Science & Technology Park (NSTP), NUST Islamabad
+            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-12 font-mono text-sm uppercase tracking-widest">
