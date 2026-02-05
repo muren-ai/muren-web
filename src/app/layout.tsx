@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "muren.ai",
-  description: "Bridging the gap between physical reality and virtual utility. Home of Escribo and CareerKonnect.",
-  keywords: ["muren", "escribo", "careerkonnect", "ai", "startups", "technology"],
+  title: "Muren - AI Research Group",
+  description: "Muren is an AI and Deep Tech research group. We design, validate, and deploy production-ready AI systems through a research-first approach.",
+  keywords: ["muren", "escribo", "careerkonnect", "ai", "startups", "technology", "research", "deep tech"],
   authors: [{ name: "Muren AI" }],
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.jpeg",
   },
 };
 
