@@ -207,7 +207,9 @@ export default function Home() {
         <div className="max-w-screen-xl mx-auto mt-24 pt-8 border-t border-neutral-900 flex justify-between text-xs text-neutral-600 font-mono uppercase">
           <span>&copy; {new Date().getFullYear()} muren.ai</span>
           <div className="flex gap-4">
-            <a href="/privacy" className="hover:text-neutral-400 text-white">Privacy Policy</a>
+            <a href="/terms" className="hover:text-neutral-400 text-white">Terms</a>
+            <a href="/privacy" className="hover:text-neutral-400 text-white">Privacy</a>
+            <a href="/contact" className="hover:text-neutral-400 text-white">Contact</a>
             <span>All Rights Reserved</span>
           </div>
         </div>
