@@ -12,6 +12,7 @@ export function Header() {
             <div className="flex gap-6 text-xs font-mono uppercase tracking-widest">
                 <Link href="/" className="hover:text-neutral-300 transition-colors">Home</Link>
                 <Link href="/contact" className="hover:text-neutral-300 transition-colors">Contact</Link>
+                <Link href="/privacy" className="hover:text-neutral-300 transition-colors">Privacy</Link>
             </div>
         </nav>
     );
