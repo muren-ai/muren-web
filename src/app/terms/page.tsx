@@ -7,7 +7,7 @@ export default function Terms() {
     return (
         <main className="bg-black text-white min-h-screen selection:bg-white selection:text-black font-sans">
             {/* Navigation */}
-            {/* Navigation */}
+
             <Header />
 
             <div className="container mx-auto px-6 py-32 max-w-3xl">
