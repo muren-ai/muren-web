@@ -1,105 +1,93 @@
 'use client';
 
-import Link from 'next/link';
+import { Header } from '@/components/Header';
 
 export default function PrivacyPolicy() {
     return (
         <main className="bg-black text-white min-h-screen selection:bg-white selection:text-black font-sans">
-            {/* Navigation */}
-            <nav className="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 mix-blend-difference">
-                <Link href="/" className="text-xl font-bold tracking-tighter uppercase">muren.ai</Link>
-                <div className="flex gap-4 text-xs font-mono uppercase tracking-widest">
-                    <Link href="/">Back to Home</Link>
+            <Header />
+
+            <div className="container mx-auto px-6 py-32 max-w-4xl">
+                <div className="mb-24">
+                    <span className="block text-xs font-mono uppercase tracking-widest text-neutral-500 mb-4">Legal</span>
+                    <h1 className="text-5xl sm:text-7xl font-bold tracking-tighter mb-6">Privacy Policy</h1>
+                    <p className="text-neutral-400 text-lg">Last Updated: January 18, 2026</p>
                 </div>
-            </nav>
 
-            <div className="container mx-auto px-6 py-32 max-w-3xl">
-                <h1 className="text-4xl sm:text-6xl font-light mb-12 tracking-tighter uppercase">Privacy Policy</h1>
-
-                <div className="prose prose-invert prose-lg text-neutral-300">
-                    <p className="text-sm font-mono tracking-widest text-neutral-500 mb-8 uppercase">Last Updated: 20 Dec 2025</p>
-
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">1. Introduction</h2>
-                        <p>
-                            MUREN AI & Deep Tech (“MUREN”, “we”, “our”, or “us”) respects your privacy and is committed to protecting personal data. This Privacy Policy explains how we collect, use, and safeguard information when you use our website, products, or services.
-                        </p>
-                    </section>
-
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">2. Information We Collect</h2>
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li><strong className="text-white">Personal Information:</strong> Name, email address, phone number, organization details, and information submitted via contact forms.</li>
-                            <li><strong className="text-white">Technical Information:</strong> IP address, browser type, device information, pages visited, and usage analytics.</li>
-                            <li><strong className="text-white">Product Data:</strong> User interactions, system logs, and performance metrics within our AI platforms.</li>
+                <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-12">
+                    <div className="hidden md:block sticky top-32 h-fit">
+                        <ul className="text-xs font-mono uppercase tracking-widest text-neutral-500 space-y-4">
+                            <li><a href="#introduction" className="hover:text-white transition-colors">01. Introduction</a></li>
+                            <li><a href="#collection" className="hover:text-white transition-colors">02. Collection</a></li>
+                            <li><a href="#usage" className="hover:text-white transition-colors">03. Usage</a></li>
+                            <li><a href="#security" className="hover:text-white transition-colors">04. Security</a></li>
+                            <li><a href="#contact" className="hover:text-white transition-colors">05. Contact</a></li>
                         </ul>
-                    </section>
+                    </div>
 
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">3. How We Use Your Information</h2>
-                        <ul className="list-disc pl-5 space-y-2">
-                            <li>To operate and improve our AI systems and platforms</li>
-                            <li>To respond to inquiries and provide support</li>
-                            <li>To conduct research, analytics, and optimization</li>
-                            <li>To ensure system security and compliance</li>
-                        </ul>
-                    </section>
+                    <div className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-p:text-neutral-300 prose-li:text-neutral-300">
+                        <section id="introduction" className="mb-20 scroll-mt-32">
+                            <h2 className="text-2xl mb-6">Introduction</h2>
+                            <p>
+                                At Muren AI ("we", "us", or "our"), we respect your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website <strong>muren.ai</strong> or use our services, including <strong>Escribo</strong> and <strong>CareerKonnect</strong>.
+                            </p>
+                            <p>
+                                Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+                            </p>
+                        </section>
 
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">4. AI & Data Processing</h2>
-                        <p>
-                            Some MUREN products use artificial intelligence and machine learning. User data is not used to train AI models without explicit consent. We apply anonymization and data minimization wherever possible.
-                        </p>
-                    </section>
+                        <section id="collection" className="mb-20 scroll-mt-32">
+                            <h2 className="text-2xl mb-6">Information We Collect</h2>
+                            <p>
+                                We may collect information about you in a variety of ways. The information we may collect on the Site includes:
+                            </p>
 
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">5. Data Sharing</h2>
-                        <p>
-                            We do not sell personal data. Information may be shared only with trusted service providers or when required by law.
-                        </p>
-                    </section>
+                            <h3 className="text-xl mt-8 mb-4 text-white">Personal Data</h3>
+                            <p>
+                                Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information, such as your age, gender, hometown, and interests, that you voluntarily give to us when you register with the Site or our mobile applications.
+                            </p>
 
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">6. Data Security</h2>
-                        <p>
-                            We use appropriate technical and organizational measures to protect data, including secure infrastructure, access controls, and encrypted communication.
-                        </p>
-                    </section>
+                            <h3 className="text-xl mt-8 mb-4 text-white">Derivative Data</h3>
+                            <p>
+                                Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site.
+                            </p>
+                        </section>
 
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">7. Cookies</h2>
-                        <p>
-                            Our website may use cookies to enhance functionality and analyze usage. You can control cookies through browser settings.
-                        </p>
-                    </section>
+                        <section id="usage" className="mb-20 scroll-mt-32">
+                            <h2 className="text-2xl mb-6">How We Use Your Information</h2>
+                            <p>
+                                Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:
+                            </p>
+                            <ul className="list-disc pl-5 space-y-2 mt-4">
+                                <li>Create and manage your account.</li>
+                                <li>Compile anonymous statistical data and analysis for use internally or with third parties.</li>
+                                <li>Email you regarding your account or order.</li>
+                                <li>Enable user-to-user communications.</li>
+                                <li>Fulfill and manage purchases, orders, payments, and other transactions related to the Site.</li>
+                                <li>Generate a personal profile about you to make future visits to the Site more personalized.</li>
+                                <li>Increase the efficiency and operation of the Site.</li>
+                            </ul>
+                        </section>
 
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">8. Your Rights</h2>
-                        <p>
-                            You may request access, correction, or deletion of your personal data by contacting us.
-                        </p>
-                    </section>
+                        <section id="security" className="mb-20 scroll-mt-32">
+                            <h2 className="text-2xl mb-6">Data Security</h2>
+                            <p>
+                                We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.
+                            </p>
+                        </section>
 
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">9. Children’s Privacy</h2>
-                        <p>
-                            MUREN does not knowingly collect data from children under the age of 13.
-                        </p>
-                    </section>
-
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">10. Policy Updates</h2>
-                        <p>
-                            This Privacy Policy may be updated periodically. Changes will be posted on this page.
-                        </p>
-                    </section>
-
-                    <section className="mb-12">
-                        <h2 className="text-xl font-bold text-white mb-4 uppercase tracking-widest text-sm">11. Contact Information</h2>
-                        <p className="mb-2"><strong className="text-white">MUREN AI & Deep Tech</strong></p>
-                        <p className="mb-1">National Science & Technology Park (NSTP), NUST Islamabad</p>
-                        <p>Email: <a href="mailto:info@muren.ai" className="underline hover:text-white">info@muren.ai</a></p>
-                    </section>
+                        <section id="contact" className="mb-20 scroll-mt-32">
+                            <h2 className="text-2xl mb-6">Contact Us</h2>
+                            <p>
+                                If you have questions or comments about this Privacy Policy, please contact us at:
+                            </p>
+                            <div className="mt-8 p-8 border border-neutral-800 bg-neutral-900/50">
+                                <p className="mb-2 font-bold text-white">Muren AI</p>
+                                <p className="mb-4 text-neutral-400">National Science & Technology Park (NSTP)<br />NUST Islamabad, Pakistan</p>
+                                <p><a href="mailto:info@muren.ai" className="text-white border-b border-white pb-0.5 hover:text-neutral-300 hover:border-neutral-300 transition-colors">info@muren.ai</a></p>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
 

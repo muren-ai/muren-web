@@ -1,17 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import { Header } from '@/components/Header';
 
 export default function Terms() {
     return (
         <main className="bg-black text-white min-h-screen selection:bg-white selection:text-black font-sans">
             {/* Navigation */}
-            <nav className="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 mix-blend-difference">
-                <Link href="/" className="text-xl font-bold tracking-tighter uppercase">muren.ai</Link>
-                <div className="flex gap-4 text-xs font-mono uppercase tracking-widest">
-                    <Link href="/">Back to Home</Link>
-                </div>
-            </nav>
+            {/* Navigation */}
+            <Header />
 
             <div className="container mx-auto px-6 py-32 max-w-3xl">
                 <h1 className="text-4xl sm:text-6xl font-light mb-12 tracking-tighter uppercase">Terms of Service</h1>

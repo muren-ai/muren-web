@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { Section } from '@/components/Section';
 import { ProductCard } from '@/components/ProductCard';
+import { Header } from '@/components/Header';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Home() {
@@ -14,14 +15,8 @@ export default function Home() {
   return (
     <main className="bg-black text-white min-h-screen selection:bg-white selection:text-black">
       {/* Navigation / Header */}
-      <nav className="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 mix-blend-difference">
-        <span className="text-xl font-bold tracking-tighter uppercase">muren.ai</span>
-        <div className="flex gap-4 text-xs font-mono uppercase tracking-widest">
-          <span>EST. 2024</span>
-          <span>///</span>
-          <span>FUTURE SYSTEMS</span>
-        </div>
-      </nav>
+      {/* Navigation / Header */}
+      <Header />
 
       {/* Hero Section */}
       <motion.div style={{ opacity, scale }} className="h-screen flex flex-col items-center justify-center relative px-4">
