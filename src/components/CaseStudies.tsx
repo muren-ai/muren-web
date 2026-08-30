@@ -243,11 +243,12 @@ export default function CaseStudies() {
           </motion.div>
           <motion.div className="sub" {...rise}>
             <p>
-              <b>The problem:</b> deforestation is only ever discovered after
-              the fact. <b>What we built:</b> Pakistan&apos;s first AI-powered
-              climate intelligence platform — solar IoT/LoRa sensors in the
-              canopy, satellite telemetry above, real-time event detection in
-              between.
+              <b>The problem:</b> forest loss is only ever measured after the
+              fact — a manual survey, a season late. <b>What we built:</b>{" "}
+              Pakistan&apos;s first AI-powered climate intelligence platform.
+              Draw a site boundary and the satellite record resolves into NDVI,
+              canopy-cover and carbon layers, read year on year against their
+              own baseline.
             </p>
             <p>
               <b>Recognition:</b> deployed with conservation authorities;
