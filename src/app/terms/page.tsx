@@ -74,7 +74,7 @@ export default function TermsPage() {
           <li>
             <h2>Systems and availability</h2>
             <p>
-              The systems we describe — including Career Konnect, Eco Muhafiz, and
+              The systems we describe — including Career Konnect, One Tree, and
               others in the array — run under separate agreements with their own
               users and partners. This site is informational; it is not the
               service, and the uptime, accuracy, and fitness of any live system is

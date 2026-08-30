@@ -11,7 +11,7 @@ const ITEMS = [
   ["CAREER KONNECT", "SYS.01"],
   ["VR TRAINING", "SYS.02"],
   ["FACTORY COPILOT", "SYS.03"],
-  ["ECO MUHAFIZ", "SYS.04"],
+  ["ONE TREE", "SYS.04"],
   ["WE BUILD OUR OWN SYSTEMS", "&", "DISRUPT THEM"],
 ] as const;
 

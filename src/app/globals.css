@@ -1221,21 +1221,14 @@ header.hd.hd--hidden {
   transform: none !important;
 }
 
-/* ---- CS.02 — full-bleed plate, title biting in, fact strip ---- */
+/* ---- CS.02 — read-out, fact strip, twin detail shots ---- */
 .cs2 {
-  /* extra bottom room so the twins + visit link clear the incoming
-     diagonal of the first world panel and never get overlapped */
+  /* extra bottom room so the twins clear the incoming diagonal of the
+     first world panel and never get overlapped */
   padding-block: clamp(40px, 7vh, 100px) clamp(110px, 16vh, 220px);
 }
-.cs2 .plate {
-  position: relative;
-}
-.cs2 .plate .slot {
-  aspect-ratio: 21/9;
-  clip-path: none;
-}
-/* nameplate bar overlaps the bottom edge of the image — bone bar / ink type,
-   the reverse-tone mirror of CS.01's ink card over its dashboard shot */
+/* bone bar / ink type — the reverse-tone mirror of CS.01's ink card. No
+   negative bite any more: there is no plate above it to overlap. */
 .cs2 .nameplate {
   position: relative;
   z-index: 5;
@@ -1247,7 +1240,6 @@ header.hd.hd--hidden {
   background: #f0efeb;
   color: var(--ink);
   padding: clamp(14px, 2vw, 24px) clamp(18px, 3.5vw, 50px);
-  margin-top: clamp(-76px, -5vw, -42px);
 }
 .cs2 .nameplate .np-title {
   font-family: var(--heavy);
@@ -1326,16 +1318,6 @@ header.hd.hd--hidden {
 }
 .cs2 .twins .t2 {
   transform: translateY(clamp(18px, 3vh, 40px));
-}
-.cs2 .visit {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.18em;
-  margin: clamp(50px, 7vh, 80px) clamp(18px, 3.5vw, 50px) 0;
-  display: inline-flex;
-  gap: 10px;
-  border-bottom: 1.5px solid var(--ink);
-  padding-bottom: 5px;
 }
 
 /* ---- worlds (kept, follow after case studies) ---- */
@@ -1438,6 +1420,63 @@ header.hd.hd--hidden {
   margin-top: 5px;
   max-width: 16ch;
 }
+/* ---- product pipeline (Factory) — a genuine three-stage sequence, so it
+   earns a connective spine: what goes in, how it's held, how it comes back.
+   CAPTURE → STRUCTURE → SERVE, the product said in its own words. */
+.world .pipeline {
+  list-style: none;
+  margin-top: 26px;
+  max-width: 46ch;
+}
+.world .pipeline li {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(78px, auto) 1fr;
+  column-gap: 16px;
+  align-items: baseline;
+  padding: 11px 0 11px 22px;
+}
+/* the spine linking the three stage nodes */
+.world .pipeline li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: color-mix(in srgb, var(--w-fg, #fff) 24%, transparent);
+}
+.world .pipeline li:first-child::before {
+  top: 16px;
+}
+.world .pipeline li:last-child::before {
+  bottom: calc(100% - 16px);
+}
+/* the node — a small amber diamond on each stage */
+.world .pipeline li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12.5px;
+  width: 7px;
+  height: 7px;
+  background: var(--w-tint, currentColor);
+  transform: rotate(45deg);
+}
+.world .pipeline .pk {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+.world .pipeline .pv {
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--w-fg, currentColor);
+  opacity: 0.72;
+}
+
 .wgrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1565,18 +1604,18 @@ header.hd.hd--hidden {
   transform: rotate(-3deg);
 }
 
-/* ---- ECO collage: three landscape dashboards in a diagonal cascade ----
+/* ---- ONE TREE collage: three landscape dashboards in a diagonal cascade ----
    each slot takes its image's NATURAL aspect ratio so nothing is cropped;
    carbon (upper-left) → emissions banner (mid-right) → flow (lower-left),
    placed so they only kiss at the corners rather than pile up */
-.world.eco .collage {
+.world.onetree .collage {
   aspect-ratio: 9/7;
   /* sit clear below the giant name like the other worlds, instead of being
-     pulled up over "MUHAFIZ" — the section grows to fit, matching SYS.01–03 */
+     pulled up over "TREE" — the section grows to fit, matching SYS.01–03 */
   margin-top: clamp(20px, 3vh, 44px);
 }
 /* c2 — Emissions (1811×868), wide banner (lifted to leave room for the tag) */
-.world.eco .c2 {
+.world.onetree .c2 {
   width: 68%;
   aspect-ratio: 1811 / 868;
   left: 9%;
@@ -1587,7 +1626,7 @@ header.hd.hd--hidden {
   transform: rotate(-1deg);
 }
 /* c1 — Carbon stock (1475×1067), on top, left */
-.world.eco .c1 {
+.world.onetree .c1 {
   width: 42%;
   aspect-ratio: 1475 / 1067;
   left: 4%;
@@ -1598,7 +1637,7 @@ header.hd.hd--hidden {
   transform: rotate(-1.5deg);
 }
 /* c3 — River flow (1380×1140), on top, right */
-.world.eco .c3 {
+.world.onetree .c3 {
   width: 40%;
   aspect-ratio: 1380 / 1140;
   right: 6%;
@@ -1608,15 +1647,74 @@ header.hd.hd--hidden {
   z-index: 4;
   transform: rotate(1.5deg);
 }
-/* show the whole dashboard for every eco shot — no crop */
-.world.eco .slot img {
+/* show the whole dashboard for every One Tree shot — no crop */
+.world.onetree .slot img {
   object-fit: contain;
 }
-.world.eco .tag {
+.world.onetree .tag {
   left: 3%;
   right: auto;
   bottom: -2%;
   transform: rotate(3deg);
+}
+
+/* ---- FACTORY collage: floor plate upper-left, register right, signal lower ----
+   these cards are baked with their own rounded corners, white edge, shadow and
+   page curl, so the slots run as plain rectangles on transparent ground — the
+   blade chamfer would bite a corner off artwork that already has one */
+.world.factory .collage {
+  aspect-ratio: 1126 / 948;
+  margin-top: clamp(20px, 3vh, 44px);
+}
+.world.factory .slot,
+.world.factory .slot:hover {
+  background: transparent;
+  clip-path: none;
+}
+.world.factory .slot img {
+  object-fit: contain;
+}
+/* c1 — National Food Industries floor plate (2280×1360); rides up past the top
+   of the collage box so it tucks under the giant wordmark */
+.world.factory .c1 {
+  width: 52.36%;
+  aspect-ratio: 2280 / 1360;
+  left: 4.31%;
+  right: auto;
+  top: -16.31%;
+  bottom: auto;
+  z-index: 2;
+  transform: none;
+}
+/* c2 — register capture (1062×1490), right column, full height */
+.world.factory .c2 {
+  width: 43.03%;
+  aspect-ratio: 1062 / 1490;
+  left: 54.79%;
+  right: auto;
+  top: 0.87%;
+  bottom: auto;
+  z-index: 3;
+  transform: none;
+}
+/* c3 — Sentinel signal (1078×1362), lower-left, overlapping the floor plate */
+.world.factory .c3 {
+  width: 41.94%;
+  aspect-ratio: 1078 / 1362;
+  left: 11.6%;
+  right: auto;
+  top: 21.84%;
+  bottom: auto;
+  z-index: 4;
+  transform: none;
+}
+/* the SHOT 03 plate sits under the signal card's lower-left corner */
+.world.factory .tag {
+  left: 12.08%;
+  right: auto;
+  top: 88.8%;
+  bottom: auto;
+  transform: rotate(-3deg);
 }
 
 /* hover: lift the hovered piece flat, dim the other two so it pops */
@@ -1651,7 +1749,7 @@ header.hd.hd--hidden {
 }
 /* tablet: collapse to a clean vertical stack, no rotation.
    `.world .collage …` variants outrank the per-world cascade placements
-   (.world.career .c1 etc.) so career/eco cards don't keep their desktop
+   (.world.career .c1 etc.) so career/onetree cards don't keep their desktop
    widths and hug the left edge of the stack */
 @media (max-width: 919px) {
   .collage {
@@ -1676,6 +1774,9 @@ header.hd.hd--hidden {
     top: auto;
     bottom: auto;
     transform: none;
+  }
+  .world.factory .collage {
+    aspect-ratio: auto;
   }
   .collage .slot:hover,
   .collage:hover .slot {
@@ -1705,7 +1806,7 @@ header.hd.hd--hidden {
   background: #1e1811;
   color: #f2ece2;
 }
-.world.eco {
+.world.onetree {
   background: #123020;
   color: #eaf2ea;
 }
@@ -1718,7 +1819,7 @@ header.hd.hd--hidden {
 .world.factory .tint {
   color: #d9963f;
 }
-.world.eco .tint {
+.world.onetree .tint {
   color: #6fc494;
 }
 
@@ -2146,7 +2247,7 @@ header.hd.drawn::after {
   --w-fg: #f2ece2;
   --w-tint: #d9963f;
 }
-.world.eco {
+.world.onetree {
   --w-fg: #eaf2ea;
   --w-tint: #6fc494;
 }

@@ -8,7 +8,7 @@ const ARRAY = [
   { no: "01", name: "Career Konnect", sector: "education & workforce", code: "EDU", href: "#w-career" },
   { no: "02", name: "VR Training", sector: "immersive simulation", code: "SIM", href: "#w-vr" },
   { no: "03", name: "Factory Copilot", sector: "industrial ai", code: "IND", href: "#w-factory" },
-  { no: "04", name: "Eco Muhafiz", sector: "climate & environment", code: "ENV", href: "#w-eco" },
+  { no: "04", name: "One Tree", sector: "climate & environment", code: "ENV", href: "#w-onetree" },
 ];
 
 export default function Nav() {
@@ -177,11 +177,6 @@ export default function Nav() {
             <div className="ov-mask">
               <a href="#" onClick={close}>
                 Research
-              </a>
-            </div>
-            <div className="ov-mask">
-              <a href="#" onClick={close}>
-                The Group
               </a>
             </div>
             <div className="ov-mask">

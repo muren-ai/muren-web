@@ -166,7 +166,7 @@ export default function CaseStudies() {
                   sub="PLATFORM IN USE"
                   src="/case-studies/careerkonnect.webp"
                 />
-                {/* clear title below the hero — same bone nameplate as CS.02 Eco Muhafiz */}
+                {/* clear title below the hero — same bone nameplate as CS.02 One Tree */}
                 <motion.div className="nameplate" {...stamp}>
                   <span className="np-title">Career Konnect</span>
                   <span className="np-meta scramble">
@@ -231,30 +231,23 @@ export default function CaseStudies() {
           </div>
         </section>
 
-        {/* CS.02 — ECO MUHAFIZ · field deployment plate + fact strip */}
-        <section className="cs2" id="cs-ecomuhafiz">
-          <div className="plate">
-            <Slot
-              big="CS.02 — FIELD DEPLOYMENT · UNIT 004"
-              sub="MARGALLA HILLS · 33.68°N"
-              src="/case-studies/eco-hero.webp"
-            />
-            {/* nameplate bar bites into the bottom of the photo — the reverse-tone
-                mirror of CS.01's ink card over its dashboard shot */}
-            <motion.div className="nameplate" {...stamp}>
-              <span className="np-title">Eco Muhafiz</span>
-              <span className="np-meta scramble">
-                CS.02 · FIELD DEPLOYMENT · UNIT 004 · 33.68°N
-              </span>
-            </motion.div>
-          </div>
+        {/* CS.02 — ONE TREE · read-out, fact strip, twin detail shots */}
+        <section className="cs2" id="cs-onetree">
+          {/* section title — same bone nameplate as CS.01, now standing on its
+              own since the full-bleed plate above it is gone */}
+          <motion.div className="nameplate" {...stamp}>
+            <span className="np-title">One Tree</span>
+            <span className="np-meta scramble">
+              CS.02 · CLIMATE INTELLIGENCE · MARGALLA SITE 04
+            </span>
+          </motion.div>
           <motion.div className="sub" {...rise}>
             <p>
               <b>The problem:</b> deforestation is only ever discovered after
               the fact. <b>What we built:</b> Pakistan&apos;s first AI-powered
               climate intelligence platform — solar IoT/LoRa sensors in the
               canopy, satellite telemetry above, real-time event detection in
-              between. Live at atlas.ecomuhafiz.com.
+              between.
             </p>
             <p>
               <b>Recognition:</b> deployed with conservation authorities;
@@ -296,20 +289,17 @@ export default function CaseStudies() {
           </div>
           <div className="twins">
             <Slot
-              big="THE SENSOR"
-              sub="CANOPY UNIT · 16:10"
-              src="/case-studies/eco-gis.webp"
+              big="THE COCKPIT"
+              sub="NDVI + CANOPY · MARGALLA SITE 04"
+              src="/case-studies/onetree-hero.webp"
             />
             <Slot
               className="t2"
-              big="THE COCKPIT"
-              sub="PLATFORM UI · 16:10"
-              src="/case-studies/eco-chainsaw.webp"
+              big="THE ACOUSTIC NET"
+              sub="MARGALLA HILLS · SECTOR A1"
+              src="/case-studies/onetree-chainsaw.webp"
             />
           </div>
-          <a className="visit" href="#">
-            VISIT ECOMUHAFIZ.COM →
-          </a>
         </section>
       </div>
     </MotionConfig>

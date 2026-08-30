@@ -43,7 +43,7 @@ const spaceMono = Space_Mono({
 const SITE_URL = "https://muren.ai";
 const TITLE = "MUREN — We build our own systems and disrupt them.";
 const DESCRIPTION =
-  "A deep-tech research group in Islamabad. Four systems — Career Konnect, VR Training, Factory Copilot, and Eco Muhafiz — shipped and running, that let people see what they couldn't before. Our AI recommends; people decide.";
+  "A deep-tech research group in Islamabad. Four systems — Career Konnect, VR Training, Factory Copilot, and One Tree — shipped and running, that let people see what they couldn't before. Our AI recommends; people decide.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     "Career Konnect",
     "VR training",
     "factory copilot",
-    "Eco Muhafiz",
+    "One Tree",
     "geospatial AI",
     "human-in-the-loop AI",
   ],

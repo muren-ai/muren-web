@@ -25,6 +25,7 @@ type World = {
   stats: [string, string][];
   enter?: string;
   status?: string;
+  pipeline?: [string, string][]; // [stage, gloss] — the product said in stages
   shots: [string, string, string?][]; // [big, sub, src?] for c1,c2,c3
   tag: string;
 };
@@ -87,28 +88,33 @@ const WORLDS: World[] = [
     ghost: "Copilot",
     tint: "#d9963f",
     flip: false,
-    anchorLead: "What the machine remembers — ",
-    anchorTint: "surfaced in seconds.",
-    body: "Point a camera at any machine. Decades of repair history, manuals and tribal knowledge. The AI recommends; the technician decides.",
-    stats: [
-      ["SEC", "CAMERA TO KNOWLEDGE"],
-      ["10+YRS", "TRIBAL KNOWLEDGE CAPTURED"],
+    anchorLead: "Point a phone at the machine — ",
+    anchorTint: "the plant answers back.",
+    body: "The know-how that used to retire with your best technician — captured once, then handed to anyone on the floor. Answers come in Urdu, offline, with the failing part lit up live in the camera.",
+    pipeline: [
+      ["CAPTURE", "manuals, videos, logs — even the paper logbook, by camera"],
+      ["STRUCTURE", "one knowledge base, keyed to machine and part"],
+      ["SERVE", "the worker points, the plant answers — spoken, in Urdu"],
     ],
-    enter: "ENTER FACTORY COPILOT",
+    stats: [
+      ["URDU", "VOICE IN, VOICE OUT"],
+      ["OFFLINE", "CACHED ON THE PHONE"],
+    ],
+    status: "IN BUILD — PILOT PLANTS, PAKISTAN FIRST",
     shots: [
-      ["THE GEARBOX", "4:5"],
-      ["TECHNICIAN + PHONE", "3:4"],
-      ["THE DIAGNOSIS", "16:10"],
+      ["THE FLOOR", "2280×1360", "/worlds/national-food-industry.webp"],
+      ["THE PAPER", "1062×1490", "/worlds/feed-the-paper.webp"],
+      ["THE CALL", "1078×1362", "/worlds/sentinel.webp"],
     ],
     tag: "SHOT 03 — STEEL, STEAM",
   },
   {
-    key: "eco",
-    id: "w-eco",
+    key: "onetree",
+    id: "w-onetree",
     no: "SYS.04 / WORLD",
     sct: "CLIMATE & ENVIRONMENT",
-    name: "Eco",
-    ghost: "Muhafiz",
+    name: "One",
+    ghost: "Tree",
     tint: "#6fc494",
     flip: true,
     anchorLead: "Where the forest speaks — ",
@@ -118,7 +124,7 @@ const WORLDS: World[] = [
       ["12,500ha", "REAL-TIME MONITORING"],
       ["98.6%", "CLASSIFICATION ACCURACY"],
     ],
-    enter: "ENTER ECO MUHAFIZ",
+    enter: "ENTER ONE TREE",
     shots: [
       ["CARBON STOCK", "1475×1067", "/worlds/carbon.webp"],
       ["EMISSIONS", "1811×868", "/worlds/emissions.webp"],
@@ -136,6 +142,16 @@ function Copy({ w }: { w: World }) {
         <span className="tint">{w.anchorTint}</span>
       </div>
       <div className="body">{w.body}</div>
+      {w.pipeline && (
+        <ol className="pipeline">
+          {w.pipeline.map(([k, v], i) => (
+            <li key={i}>
+              <span className="pk tint">{k}</span>
+              <span className="pv">{v}</span>
+            </li>
+          ))}
+        </ol>
+      )}
       <div className="stats">
         {w.stats.map(([n, l], i) => (
           <div key={i}>
